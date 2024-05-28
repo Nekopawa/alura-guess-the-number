@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Guess the number</title>
+
+    <!-- styles -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./assets/main.css" />
+
+    <!-- scripts -->
+    <!-- loads FA quicker -->
+    <script type="text/javascript">
+      (function () {
+        var css = document.createElement("link");
+        css.href = "https://use.fontawesome.com/releases/v5.1.0/css/all.css";
+        css.rel = "stylesheet";
+        css.type = "text/css";
+        document.getElementsByTagName("head")[0].appendChild(css);
+      })();
+    </script>
+
+    <script src="./assets/main.js" defer></script>
+  </head>
+  <body>
+    <main>
+      <h1>Guess the secret number</h1>
+      <h2>
+        The secret number is between <span id="g-number__lowest">0</span> and
+        <span id="g-number__highest">100</span>
+      </h2>
+      <p>You said:</p>
+      <div id="g-voice-number">100</div>
+      <p>
+        The secret number is
+        <span id="g-feedback"
+          >higher <i id="g-arrow-icon" class="fa-solid fa-arrow-up"></i
+        ></span>
+      </p>
+    </main>
+
+    <script
+      src="https://kit.fontawesome.com/30cd7b2e77.js"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
