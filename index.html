@@ -4,13 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Guess the number</title>
+    <link rel="icon" type="image/x-icon" href="./assets/img/icon.png" />
 
     <!-- styles -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
     />
-    <link rel="stylesheet" href="./assets/main.css" />
+    <link rel="stylesheet" href="./assets/css/main.css" />
 
     <!-- scripts -->
     <!-- loads FA quicker -->
@@ -24,23 +25,20 @@
       })();
     </script>
 
-    <script src="./assets/main.js" defer></script>
+    <script src="./app/drawNumber.js" defer></script>
+    <script src="./app/speechRecognition.js" defer></script>
+    <script src="./app/main.js" defer></script>
   </head>
   <body>
     <main>
       <h1>Guess the secret number</h1>
       <h2>
-        The secret number is between <span id="g-number__lowest">0</span> and
-        <span id="g-number__highest">100</span>
+        The secret number is between <span id="g-number-lowest">0</span> and
+        <span id="g-number-highest">100</span>
       </h2>
       <p>You said:</p>
-      <div id="g-voice-number">100</div>
-      <p>
-        The secret number is
-        <span id="g-feedback"
-          >higher <i id="g-arrow-icon" class="fa-solid fa-arrow-up"></i
-        ></span>
-      </p>
+      <div id="g-guessed-number"></div>
+      <p id="g-feedback"></p>
     </main>
 
     <script
